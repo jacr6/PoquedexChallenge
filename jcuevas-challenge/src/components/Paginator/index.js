@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect } from 'react';
 import './style.css';
 import { StoreContext } from '../../context';
 import useSinglePokemon from '../../hooks/useSinglePockemon';
@@ -20,7 +20,7 @@ const Paginator = ({ activePage, onClick }) => {
 
     const PaginatorHandler = (value) => {
 
-        if (page >= 2) {
+        if (page >= 2||value==1) {
 
             setPage(page+value)
             setOffset(mod(page));
@@ -38,6 +38,13 @@ const Paginator = ({ activePage, onClick }) => {
         setSinglePokemon({id:value})
         setComplete(false)
     }
+
+    useEffect(() => {
+        if(page==1) {
+            setSinglePokemon({id:1})
+            setComplete(false)
+        }
+    },[]);
 
     return (
         <div className="pagination">
