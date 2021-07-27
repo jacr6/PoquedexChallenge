@@ -1,0 +1,44 @@
+{
+  "name": "jcuevas-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "localforage": "^1.9.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development && react-scripts --max_old_space_size=4096 start",
+    "production": "cross-env NODE_ENV=production && react-scripts --max_old_space_size=4096 start",
+    "build": "cross-env NODE_ENV=production && react-scripts --max_old_space_size=4096 build",
+    "prebuild": "",
+    "postbuild": "",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
