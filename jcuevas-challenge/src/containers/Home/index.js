@@ -13,7 +13,7 @@ const {MasterPokemon, setMasterPokemon} = useMasterPokemon(offset)
 console.log("MASTER: ", MasterPokemon)
   return (
     <div className="container">
-      <h1>{process.env.REACT_APP_POKEMON}</h1>
+      {/* <h1>{process.env.REACT_APP_POKEMON}</h1> */}
       <Gallery/>
       <Paginator/>
     </div>

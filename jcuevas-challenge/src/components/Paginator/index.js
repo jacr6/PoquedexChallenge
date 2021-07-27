@@ -24,7 +24,8 @@ const Paginator = ({ activePage, onClick }) => {
 
             setPage(page+value)
             setOffset(mod(page));
-          
+            setSinglePokemon({id:page+value})
+            setComplete(false)
 
         }
            
@@ -34,7 +35,7 @@ const Paginator = ({ activePage, onClick }) => {
 
     const DetailPokemonHandler = (value) => {
         setPage(value)
-        setSinglePokemon({id:page})
+        setSinglePokemon({id:value})
         setComplete(false)
     }
 

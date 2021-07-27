@@ -13,7 +13,12 @@ export default function Gallery({ children }) {
   const {limit} = context.limit;
   const {offset, setOffset} = context.offset;
   console.log("SINGLE: ", SinglePokemon)
- return   <img src={SinglePokemon&&SinglePokemon.sprites&&SinglePokemon.sprites.front_default}/>
+ return  <div>
+
+<img src={SinglePokemon&&SinglePokemon.sprites&&SinglePokemon.sprites.front_default}/>
+<h3>{SinglePokemon&&SinglePokemon.name&&SinglePokemon.name}</h3>
+
+ </div> 
   return (
  
     
