@@ -1,8 +1,17 @@
 import { render, screen } from '@testing-library/react';
-import App from './containers/Home';
+import App from './containers/layout';
+import React from 'react';
+import ReactDOM from 'react-dom';  
+import reportWebVitals from './reportWebVitals';
+import StoreProvider  from './context'
+import 'dotenv'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+test('renders Pokemon link', () => {
+  render(<React.StrictMode>
+    <StoreProvider>
+          <App />
+      </StoreProvider>
+</React.StrictMode>);
+  const linkElement = screen.getByText(/Pokemon/i);
   expect(linkElement).toBeInTheDocument();
 });
