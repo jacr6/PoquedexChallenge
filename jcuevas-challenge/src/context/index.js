@@ -9,6 +9,7 @@ localforage.config({
     name: 'localStorage'
 });
 
+let lang = "es"
 
 
 i18n
@@ -20,16 +21,30 @@ i18n
     resources: {
       en: {
         translation: {
-          "Welcome to React": "Welcome to React and react-i18next"
+          "New Pokemon App": "New Pokemon App and react-i18next",
+          "Home": "Home",
+          "Features": "Features",
+          "Blog": "Blog",
+          "Pricing": "Pricing",
+          "Contact": "Contact",
+          "Change Language": "Change Language",
+
         }
       },
       es: {
         translation: {
-          "Welcome to React": "Welcome to React and react-i18next"
+          "New Pokemon App": "Nuevo Aplicación Pokemon (react-i18next)",
+          "Home": "Inicio",
+          "Features": "Funcionalidades",
+          "Blog": "Blog",
+          "Pricing": "Precios",
+          "Contact": "Contacto",
+          "Change Language": "Cambiar idioma",
+
         }
       }
     },
-    lng: "es", // if you're using a language detector, do not define the lng option
+    lng: lang, // if you're using a language detector, do not define the lng option
     fallbackLng: "en",
 
     interpolation: {
@@ -48,6 +63,11 @@ export const ManageData = (key, value) => {
         Data[key] = value 
     }
 }
+
+export const ChangeLanguage = (lng) => {
+    i18n.changeLanguage(lng) 
+    lang = lng
+}
  
 export default ({ children }) => {
     const { t } = useTranslation();
@@ -55,7 +75,8 @@ export default ({ children }) => {
     const [limit, setLimit] = useState(5);
     const [page, setPage] = useState(1);
     const [SinglePokemon, setSinglePokemon] = useState();
-    const global = {
+    const global = { 
+      lang,
       t,
       offset:{offset, setOffset},
       limit:{limit, setLimit},

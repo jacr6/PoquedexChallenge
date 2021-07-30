@@ -14,7 +14,7 @@ export default function Layout() {
         <div>
             <Navbar/>
             <Intro/>
-            <BgDark/>
+            {/* <BgDark/> */}
             {/* <BgLight/>
             <BgDarkDivider/> 
             <Footer/> */}

@@ -1,7 +1,10 @@
 import React from 'react';
 import logodark from "../assets/images/pokemon.png"
 // create a component function render Navbar
+import {StoreContext, ChangeLanguage } from '../context'
 export default function Navbar() {
+    const context = React.useContext(StoreContext);
+    const {t,lang} = context;
     return (
 
         <nav className="navbar navbar-expand-lg">
@@ -15,27 +18,27 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href="#">Home</a>
+                            <a className="nav-link" href="#">{t("Home")}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Features</a>
+                            <a className="nav-link" href="#">{t("Features")}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Blog</a>
+                            <a className="nav-link" href="#">{t("Blog")}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Pricing</a>
+                            <a className="nav-link" href="#">{t("Pricing")}</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Contact</a>
+                            <a className="nav-link" href="#">{t("Contact")}</a>
                         </li>
                     </ul>
 
                     <ul className="navbar-nav ml-auto">
-                        <li className="nav-item active">
-                            <a className="nav-link" href="#"><i className="icon ion-md-download"></i> Download now </a>
+                        <li  className="nav-item active">
+                            <button onClick={()=>ChangeLanguage(lang=="es"?"en":"es")} className="nav-link" >  {t("Change Language")} </button>
                         </li>
-                    </ul>
+                    </ul>{lang}
                 </div>
             </div>
         </nav>
