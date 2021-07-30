@@ -8,9 +8,11 @@
     "@testing-library/user-event": "^12.8.3",
     "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
+    "i18next": "^20.3.5",
     "localforage": "^1.9.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "^11.11.4",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.2"
   },

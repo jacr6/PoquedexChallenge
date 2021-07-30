@@ -8,7 +8,7 @@ const encodeObject = params => {
 };
 
 export const fetchHandler = async (met, url, body, buildInArgs) => {
-  let jwtToken = "";
+  // let jwtToken = "";
   // if (sessionStorage.jwtToken !== undefined)
   //   jwtToken = "Bearer " + sessionStorage.jwtToken;
 

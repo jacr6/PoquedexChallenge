@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; 
-import App from './containers/Home';
+import App from './containers/layout';
 import reportWebVitals from './reportWebVitals';
 import StoreProvider  from './context'
 import 'dotenv'
